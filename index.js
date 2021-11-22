@@ -23,7 +23,7 @@ var countdowns = countdown(new Date(2021, 10, 22));
 console.log(countdowns);
 
 setInterval(() => {
-  var countdowns = countdown(new Date(2021, 10, 22));
+  var countdowns = countdown(new Date(2021, 10, 25, 18));
   days.innerHTML = `${countdowns.days} days`;
   hours.innerHTML = `${countdowns.hours} hours`;
   minutes.innerHTML = `${countdowns.minutes} minutes`;

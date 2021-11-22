@@ -18,7 +18,6 @@ const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#minutes");
 const seconds = document.querySelector("#seconds");
-
 setInterval(() => {
   var countdowns = countdown(new Date(2021, 10, 25, 19));
   days.innerHTML = `${countdowns.days} days`;

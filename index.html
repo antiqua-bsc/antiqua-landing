@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav
+        class="xl:max-w-screen-2xl md:max-w-screen-xl mx-auto lg:px-10 px-6 flex justify-between items-center pb-3 pt-6 absolute top-0 left-0 w-full">
+        <div>
+            <img src="./assets/typo.png" alt="" class="w-32">
+        </div>
+        <div class="hidden md:flex items-center">
+            <ul class="flex">
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#vision">Our vision</a>
+                </li>
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#marketplace">Marketplace</a>
+                </li>
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#tokenomics">Tokenomics</a>
+                </li>
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#roadmap">Roadmap</a>
+                </li>
+                <li class="lg:text-lg text-sm font-semibold mr-6 font-nunito">
+                    <a href="#telegram">Telegram</a>
+                </li>
+            </ul>
+            <div>
+                <button class="px-6 py-2 text-lg rounded-lg bg-yellow-300 buttonShadow mr-2">Presale</button>
+                <button class="px-6 py-2 text-lg rounded-lg bg-yellow-300 buttonShadow">Whitepaper</button>
+            </div>
+        </div>
+        <div id="openNav" class="md:hidden">
+            <i class="ph-list-bold text-2xl"></i>
+        </div>
+    </nav>
+    <nav id="mobileNav" class="hidden fixed flex flex-col items-center bg-black w-screen md:px-8 px-6 top-0 z-30">
+        <div class="absolute w-full top-0 left-0 flex items-center px-6 pb-4 pt-8 justify-between">
+            <div>
+                <img src="./assets/logo.svg" alt="" class="w-32 h-auto">
+            </div>
+            <button class="flex md:hidden" id="closeNav">
+                <i class="ph-x-bold text-white text-2xl"></i>
+            </button>
+        </div>
+        <div class="h-screen flex flex-col justify-center">
+            <ul class="text-white flex flex-col justify-center mb-12">
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#home" class="mobileNavLinks">Home</a>
+                </li>
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#vision" class="mobileNavLinks">Our vision</a>
+                </li>
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#marketplace" class="mobileNavLinks">Marketplace</a>
+                </li>
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#nfts">Our NFTs</a>
+                </li>
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#tokenomics" class="mobileNavLinks">Tokenomics</a>
+                </li>
+                <li class="text-3xl text-center font-bold mb-6 font">
+                    <a href="#roadmap" class="mobileNavLinks">Roadmap</a>
+                </li>
+            </ul>
+            <button class="bg-yellow-300 px-8 py-2 text-lg rounded-md font-medium mb-6"><a target="_blank">Presale</a>
+            </button>
+            <button class="bg-yellow-300 px-8 py-2 text-lg rounded-md font-medium"><a target="_blank">Whitepaper</a>
+            </button>
+        </div>
+        </div>
+    </nav>
+    <section id="home" class="max-w-screen-xl mx-auto px-8 py-24 pt-44">
+        <div class="relative md:flex h-full ">
+            <div class="w-full md:w-7/12 flex flex-col justify-center mb-16 md:mb-0">
+                <h3 class="xl:text-6xl lg:text-5xl text-4xl text-center md:text-left font-bold mb-12 font">Unlock the
+                    ancient world Where Ancient art meets modern technology.</h3>
+                <div class="flex items-center md:justify-start justify-center mb-12">
+                    <button class="px-12 py-4 text-lg rounded-lg bg-yellow-300 font-semibold buttonShadow">Join our
+                        presale</button>
+                </div>
+                <div class="mb-12">
+                    <div class="flex flex-wrap justify-center md:justify-start items-center">
+                        <p id="days" class="text-xl md:text-2xl font-semibold mr-3 font whitespace-nowrap"></p>
+                        <p id="hours" class="text-xl md:text-2xl font-semibold mr-3 font whitespace-nowrap"></p>
+                        <p id="minutes" class="text-xl md:text-2xl font-semibold mr-3 font whitespace-nowrap"></p>
+                        <p id="seconds" class="text-xl md:text-2xl font-semibold font whitespace-nowrap"></p>
+                    </div>
+                </div>
+                <div class="md:ml-0 mx-auto">
+                    <a href="https://t.me/Antiqua_Bsc" target="_blank">
+                        <i class="ph-telegram-logo-fill text-3xl mx-3"></i>
+                    </a>
+                    <a href="https://www.instagram.com/antiqua_bsc/" target="_blank">
+                        <i class="ph-instagram-logo-fill text-3xl mx-3"></i></a>
+                    <a href=" https://twitter.com/AntiquaBsc" target="_blank">
+                        <i class="ph-twitter-logo-fill text-3xl mx-3"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="w-9/12 md:w-5/12 flex justify-center items-center mx-auto">
+                <div class="w-96 h-auto">
+                    <img src="./assets/logo.png" alt="" class="w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="vision" class="max-w-screen-xl mx-auto px-8 py-16 md:py-32">
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="w-full md:w-1/2 flex justify-center items-center relative">
+                <img src="./assets/art2.png" alt="" class="w-full md:w-2/3 h-auto">
+            </div>
+            <div class="w-full md:w-1/2 mb-20 md:mb-0">
+                <div class="mb-6 flex justify-center md:justify-start items-center">
+                    <i class="ph-circle-fill mr-4"></i>
+                    <span class="text-4xl font-bold font">Our Vision</span>
+                </div>
+                <div class="pr-0 md:pr-12">
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        Art is everywhere and always has been. It lines the walls of museums, buildings, and caves. It
+                        fills our halls and ears with sound and music. It captures the eye with beautiful movement and
+                        imagery. Art doesn’t just express our passions and history; it defines, influences and shapes
+                        culture and civilization. </p>
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left">let's
+                        embark on a journey to resurrect ancient civilisations visualised through unique artwork
+                        collections of NFTs that you can buy, sell, trade and exchange on our platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="marketplace" class="max-w-screen-xl mx-auto px-8 py-16 md:py-32">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 mb-20 md:mb-0">
+                <div class="mb-6 flex justify-center md:justify-start items-center">
+                    <i class="ph-circle-fill mr-4"></i>
+                    <span class="text-4xl font-bold font">Our Marketplace</span>
+                </div>
+                <div class="pr-0 md:pr-12 mb-16">
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        Antiqua is a marketplace for NFTs that are based on Ancient civilizations. Here, you can buy,
+                        sell and
+                        EXCHANGE digital art that will never be duplicated or destroyed, the NTFs are minted
+                        when the artwork is created.
+                    </p>
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        Our platform will soon offer more features and functions as we seek avenues to improve the user
+                        experience and entice and retain more users, who’ll be able to carry out transactions on our
+                        platform. This includes buying and selling unique NFTs and exchanging NFTs with other
+                        user's NFTs and more.</p>
+                </div>
+                <div class="flex justify-center md:justify-start ">
+                    <button
+                        class="px-12 py-3 text-lg rounded-lg bg-yellow-300 font-semibold buttonShadow">Marketplace</button>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center items-center relative">
+                <img src="./assets/art1.png" alt="" class="w-full md:w-2/3 h-auto">
+            </div>
+        </div>
+    </section>
+    <section id="htb" class="max-w-screen-xl mx-auto px-8 py-16 md:py-32">
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="w-full md:w-1/2 flex justify-start items-center relative">
+                <img src="./assets/5.png" alt="" class="w-full md:w-2/3 h-auto">
+            </div>
+            <div class="w-full md:w-1/2 mb-20 md:mb-0">
+                <div class="mb-6 flex justify-center md:justify-start items-center">
+                    <i class="ph-circle-fill mr-4"></i>
+                    <span class="text-4xl font-bold font">How to buy</span>
+                </div>
+                <div class="mb-16">
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        You first need to have a crypto wallet, you mainly have 2 options, MetaMask(a crypto wallet in
+                        form of browser extension) or TrustWallet(an app for your phone). once you choose the wallet
+                        that suits you, you will have to add the binance smart chain to your network-list( click here
+                        for how to do so:
+                        <a class="text-yellow-400" href="
+                            https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain">Buy
+                            some BNB on your wallet</a>
+
+                    </p>
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        you need to have some BNB in your wallet, you can buy that ammount you want on an exchange(i.e
+                        Binance, coinbase etc), after that transfer it to your wallet address. BEP-20 addresses start
+                        with a "0x"</p>
+
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        participate in presale on Pinksale <a class="text-yellow-400" href="">Click here</a> to head
+                        over to pinksale when the
+                        presale is live, Enter the amount
+                        you want to contribute with and click on the buy button.
+                        you can click here <a class="text-yellow-400"
+                            href="https://docs.pinksale.finance/investing/how-to-claim-tokens"></a> to see how to
+                        claim tokens <a href="https://docs.pinksale.finance/investing/how-to-claim-tokens"></a>
+                    </p>
+                    <p class="text-lg lg:text-xl xl:text-2xl font-medium leading-10 text-center md:text-left mb-5">
+                        Head on to PancakeSwap and swap for $ANTQ:
+                        after the launch on pancakeswap, you can head over to pancakeswap , use the token address to
+                        select Antiqua token. set the slippage tolerance between 6% and 8%. (sometimes it may be a bit
+                        more, depending on how much demand there is)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nfts" class="max-w-screen-xl mx-auto px-8 py-12 md:py-32 relative">
+        <div class="w-full mb-20">
+            <div class="flex">
+                <div class="w-full md:w-8/12 mb-12 md:mb-12">
+                    <div class="mb-6 flex justify-center md:justify-start items-center">
+                        <i class="ph-circle-fill mr-4"></i>
+                        <span class="text-4xl font-bold font">Our NFTs</span>
+                    </div>
+                    <div class="pr-0 md:pr-12">
+                        <p class="text-lg lg:text-xl xl:text-2xl leading-10 font-medium text-center md:text-left">We are
+                            a group of Blockchain developers & business executives who love to solve a real-world
+                            problem at scale. We are passionate about NFTs & how they are bringing changes to the world.
+                            Our NFT collections are inspired and based on ancient civilisations, from the Maya
+                            civilisation era to the native Americans, we've captured the spirit of these
+                            great cultures in our art.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-start">
+                <button
+                    class="px-12 py-3 text-lg rounded-lg bg-yellow-300 font-semibold buttonShadow">Marketplace</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8">
+            <div>
+                <div id="collection"
+                    class="h-72 w-full bg-yellow-300 relative cursor-pointer rounded-lg shadow-button mb-3 collection">
+                    <div
+                        class="viewCollection w-10 h-10 absolute right-4 bottom-4 shadow-button bg-black bg-opacity-50 flex justify-center items-center rounded-full">
+                        <i class="ph-eye-bold text-lg text-yellow-300"></i>
+                    </div>
+                    <div
+                        class="w-full h-full absolute top-0 right-0 bg-black bg-opacity-0 collectionBlackFilter flex justify-center items-center">
+                        <span class="text-white text-xl font-medium">view collection</span>
+                    </div>
+                    <img src="./assets/nft1.png" alt="" class="w-full h-full rounded-lg  cursor-pointer">
+                </div>
+                <p class="font-nunito font-bold text-xl text-center">The Indigenous people of the Americas</p>
+            </div>
+            <div>
+                <div
+                    class="h-72 w-full bg-yellow-300 collection relative cursor-pointer rounded-lg shadow-button mb-3 collection">
+                    <div
+                        class="viewCollection w-10 h-10 absolute right-4 bottom-4 shadow-button bg-black bg-opacity-50 flex justify-center items-center rounded-full">
+                        <i class="ph-eye-bold text-lg text-yellow-300"></i>
+                    </div>
+                    <div
+                        class="w-full h-full absolute top-0 right-0 bg-black bg-opacity-0 collectionBlackFilter flex justify-center items-center">
+                        <span class="text-white text-xl font-medium">view collection</span>
+                    </div>
+                    <img src="./assets/maya.png" alt="" class="w-full h-full rounded-lg  cursor-pointer">
+                </div>
+                <p class="font-nunito font-bold text-xl text-center">The Mayan Civilization</p>
+            </div>
+            <div>
+                <div
+                    class="h-72 w-full bg-yellow-300 collection relative cursor-pointer rounded-lg shadow-button mb-3 collection">
+                    <div
+                        class="viewCollection w-10 h-10 absolute right-4 bottom-4 shadow-button bg-black bg-opacity-50 flex justify-center items-center rounded-full">
+                        <i class="ph-eye-bold text-lg text-yellow-300"></i>
+                    </div>
+                    <div
+                        class="w-full h-full absolute top-0 right-0 bg-black bg-opacity-0 collectionBlackFilter flex justify-center items-center">
+                        <span class="text-white text-xl font-medium">view collection</span>
+                    </div>
+                    <img src="./assets/pharaoh.png" alt="" class="w-full h-full rounded-lg  cursor-pointer">
+                </div>
+                <p class="font-nunito font-bold text-xl text-center">The Pharoanic civilization</p>
+            </div>
+            <div>
+                <div
+                    class="h-72 w-full bg-yellow-300 bg-opacity-25 collection relative cursor-pointer rounded-lg shadow-button mb-3 collection flex flex-col justify-center items-center">
+                    <i class="ph-lock-fill text-2xl"></i>
+                    <span class="text-2xl font-bold">Coming soon</span>
+                </div>
+            </div>
+            <div id="collectionDetails"
+                class="hidden w-full h-screen fixed top-0 left-0 backdrop-filter backdrop-blur-lg bg-black bg-opacity-25">
+                <div class="w-full md:w-2/3 ml-auto bg-primary h-full shadow px-8 py-8 md:px-16 md:py-12 relative">
+                    <div class="flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex justify-between items-center mb-12">
+                                <h1 class="text-4xl font-bold font">Antiqua Collection</h1>
+                                <button id="closeCollection">
+                                    <i class="ph-x-bold text-2xl"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-xl font-medium">The Native Americans cultures across the United States are
+                                notable for their wide variety and diversity of lifestyles and art. The earliest
+                                acknowledged inhabitants of this continent, they know how to respect the earth
+                                and its natural resources. They also believe that all living things are related to one
+                                another in the great circle of life.</p>
+                        </div>
+                        <div class="">
+                            <div class="flex justify-between items-center mb-12">
+                                <button
+                                    class="px-6 md:px-12 py-2 md:py-3 text-lg rounded-lg bg-yellow-300 font-semibold buttonShadow">View
+                                    collection</button>
+                                <div class="flex items-center md:pr-6">
+                                    <button>
+                                        <i class="ph-caret-left text-2xl mr-6 arrow-prev"></i>
+                                    </button>
+                                    <button>
+                                        <i class="ph-caret-right text-2xl  arrow-next"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="glider-contin">
+                                <div class="glider">
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft1.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft2.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft3.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft4.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft5.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft6.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft7.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft8.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft9.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="h-56 mr-6 bg-yellow-300 rounded-md shadow-button relative">
+                                            <img src="./assets/nft10.png" alt=""
+                                                class="w-full h-full rounded-md object-cover absolute">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="max-w-screen-lg mx-auto py-12 md:py-24 px-8">
+        <div class="w-24 h-px bg-black mx-auto"></div>
+        <h3 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center my-24 font">
+            Antiqua is the first marketplace that brought the idea of exchanging NFTs available on the blockchain
+            network.
+        </h3>
+        <div class="w-24 h-px bg-black mx-auto"></div>
+    </section>
+    <section id="tokenomics" class="max-w-screen-xl mx-auto px-8 py-20 md:py-24 px-8">
+        <h1 class="text-5xl lg:text-5xl xl:text-6xl font-bold font mb-12 text-center">Tokenomics</h1>
+        <p class="text-lg lg:text-xl xl:text-2xl font-medium mb-32 text-center">To maintain the long-term value of the
+            token supply, we have a deflationary plan to take out tiny bits of the 1 Billion token supply through
+            buybacks and burn.</p>
+
+        <div class="flex flex-col mt-12">
+            <div class="w-full flex justify-around mb-16 md:mb-24">
+                <div class="flex flex-col items-center justify-center md:mb-0 mb-12">
+                    <img src="/assets/donut.png" alt="" class="w-10/12 h-auto">
+                    <span class="text-lg font-semibold">Taxes Destribution</span>
+                </div>
+
+            </div>
+            <div class="w-full mb-16 md:mb-0">
+                <div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-16">
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">2% Burn</h3>
+                            <p class="text-lg text-center">2% of each transaction is allocated to the Burn Wallet to
+                                create a true burn,
+                                meaning you can exchange the actual value for the tokens you sent to the burn wallet</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">3% Rewards</h3>
+                            <p class="text-lg text-center">3% of each transaction is redistributed to our $ ANTQ holders
+                                in XRP
+                                (bep20).</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">2% Buyback</h3>
+                            <p class="text-lg text-center">2% of each transaction will be automatically made a Buyback
+                                to
+                                make sure the token has stable growth in order to create a rising price floor and
+                                stability.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">3% Marketing</h3>
+                            <p class="text-lg text-center">3% of each transaction will be sent to the marketing wallet
+                                which will help the team with sustaining organic growth and hype for the token.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">1% Charity</h3>
+                            <p class="text-lg text-center">1% of each transaction will be allocated as charity fee</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">1.5% Blog distribution</h3>
+                            <p class="text-lg text-center">1% of each transaction is distributed to blog Authors</p>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div class="flex justify-center">
+                                <i class="ph-fire-fill text-yellow-300 text-5xl mb-5"></i>
+                            </div>
+                            <h3 class="mb-2 text-xl font font-bold text-center">1.5% Development of the marketplace</h3>
+                            <p class="text-lg text-center">1.5% of each transaction will be used for the marketplace
+                                development</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-screen-lg mx-auto py-20 md:py-24 px-8">
+        <div class="w-24 h-px bg-black mx-auto"></div>
+        <h3 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center my-24 font">
+            Antiqua is the first blockchain-based decentralised marketplace that presents the ability to exchange NFTs
+            that are
+            available our network.
+        </h3>
+        <div class="w-24 h-px bg-black mx-auto"></div>
+    </section>
+    <section id="roadmap" class="max-w-screen-xl mx-auto py-12 md:py-24 px-8">
+        <h1 class="text-5xl lg:text-5xl xl:text-6xl font-bold font mb-12 text-center">Roadmap</h1>
+        <p class="text-lg lg:text-xl xl:text-2xl font-medium mb-12 text-center">Lorem ipsum dolor sit, amet consectetur
+            adipisicing
+            elit.
+            Praesentium
+            sapiente modi quis veritatis
+            voluptatibus ducimus recusandae pariatur unde possimus vitae.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10">
+            <div>
+                <div class="flex justify-center py-4">
+                    <img src="./assets/monky1.png" alt="" class="w-32 h-auto">
+                </div>
+                <h3 class="text-2xl font-bold mb-6">Phase I</h3>
+                <ul class="list-disc">
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Brainstorming Ideas</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Building the Marketplace</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Launching Website and Socials media</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">First wave of marketing</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex justify-center py-4">
+                    <img src="./assets/monky2.png" alt="" class="w-32 h-auto">
+                </div>
+                <h3 class="text-2xl font-bold mb-6">Phase II</h3>
+                <ul class="list-disc">
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Designing Firsts ancient civilization
+                            collections of NFT’s</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Launch of Whitepaper</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Smart Contract Develop</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Interfi Audit</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Second marketing wave</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Launch of Marketplace version Alpha</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex justify-center py-4">
+                    <img src="./assets/monky3.png" alt="" class="w-32 h-auto">
+                </div>
+                <h3 class="text-2xl font-bold mb-6">Phase III</h3>
+                <ul class="list-disc">
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Presale on PINKSALE</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Massive marketing campaign</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Launch on Pancakeswap</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Continuous Marketing Push aiming +4000
+                            holders</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex justify-center py-4">
+                    <img src="./assets/monky4.png" alt="" class="w-32 h-auto">
+                </div>
+                <h3 class="text-2xl font-bold mb-6">Phase IV</h3>
+                <ul class="list-disc">
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Many exciting partnerships with blog
+                            writers</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Launch the Belta version of Marketplace with
+                            full functional options</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Many exciting partnerships with NFT
+                            artists</span>
+                    </li>
+                    <li class="mb-4">
+                        <span class="text-lg font-nunito font-medium">Re-evaluation of Roadmap</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col md:flex-row max-w-screen-xl mx-auto py-12 md:py-24 px-8">
+        <div class="w-full md:w-1/3 mb-16 md:mb-0">
+            <h1 class="text-5xl xl:text-6xl font-bold font mb-12 text-center md:text-left">FAQ</h1>
+            <p class="text-xl font-medium text-center md:text-left">The most asked question about the project
+            </p>
+        </div>
+        <div class="w-full md:w-2/3 pl-0 md:pl-12">
+            <div class="border-t-4 border-black py-5 phases">
+                <div class="flex items-center justify-between w-full pointer-events-none">
+                    <p class="text-xl font-medium">what is Antiqua Token?</p>
+                    <i class="ph-plus-bold text-xl"></i>
+                </div>
+                <div class="hidden mt-6 content border-t border-black  py-6">
+                    <p class="text-xl">ANTQ Token is a BEP-20 utility token built on the Binance Smart chain, the token
+                        has a main goal
+                        which is to produce passive income for token holders by developing various profit-generating
+                        businesses.</p>
+                </div>
+            </div>
+            <div class="border-t-4 border-black py-5 phases">
+                <div class="flex items-center justify-between w-full pointer-events-none">
+                    <p class="text-xl font-medium">Can you describe what is Antiqua marketplace ?</p>
+                    <i class="ph-plus-bold text-xl"></i>
+                </div>
+                <div class="hidden mt-6 py-6 border-t border-black  content">
+                    <p class="text-xl">Antiqua is a marketplace for NFTs that are based on ancient civilizations. Here,
+                        you can buy,
+                        sell and EXCHANGE (we mean by exchange is that users can exchange two or more NFTs for a rare
+                        one)digital art that will never be duplicated or destroyed, the NTFs are minted when the artwork
+                        is created.
+                        Our platform will soon offer more features and functions as we seek avenues to improve the user
+                        experience and entice and retain more users, who’ll be able to carry out transactions on our
+                        platform. This includes buying and selling unique NFTs and exchanging NFTs with other users NFTs
+                        and more.</p>
+                </div>
+            </div>
+            <div class="border-t-4 border-black py-5 phases">
+                <div class="flex items-center justify-between w-full pointer-events-none">
+                    <p class="text-xl font-medium">What NFT collections you will have on your marketplace?</p>
+                    <i class="ph-plus-bold text-xl"></i>
+                </div>
+                <div class="hidden mt-6 py-6 border-t border-black  content">
+                    <p class="text-xl">Our NFT collections are inspired and based on ancient civilizations, from the
+                        Maya civilization
+                        era to the native Americans, we've captured the spirit of these great cultures in our art.</p>
+                </div>
+            </div>
+            <div class="border-t-4 border-b-4 border-black py-5 phases">
+                <div class="flex items-center justify-between w-full pointer-events-none">
+                    <p class="text-xl font-medium">How the team had this idea?</p>
+                    <i class="ph-plus-bold text-xl"></i>
+                </div>
+                <div class="hidden mt-6 py-6 border-t border-black content">
+                    <p class="text-xl">Not only are cryptocurrencies like Bitcoin and Ethereum on the rise, but an
+                        emerging type of
+                        token called Non-Fungible Tokens (NFTs) popularity is taking off. NFTs happen to go beyond
+                        cryptocurrency and blockchain industries; they are becoming the next big thing. That's why we
+                        created this NFT Collection that will be the first to depict ancient civilizations and will only
+                        be found on our marketplace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="telegram" class="max-w-screen-lg mx-auto py-16 md:py-24 px-8">
+        <div class="w-24 h-2 bg-primary mx-auto"></div>
+        <h3 class="text-4xl lg:text-4xl xl:text-5xl font-bold font text-center my-24 font-alien">
+            Want to be a part of our community? Join us on telegram
+        </h3>
+        <button class="bg-yellow-300 buttonShadow rounded-lg px-16 py-4 block text-lg font-semibold mx-auto">
+            <a href="https://t.me/AlieNftBsc">
+                Join Us
+            </a>
+        </button>
+    </section>
+    <footer
+        class="flex justify-between relative z-20 max-w-screen-xl py-8 mt-20 md:mt-24 mx-auto border-t border-black px-8">
+        <p class="text-light text-center font-nunito">Copyright 2021 © AlieNft</p>
+        <div class="flex justify-center items-center">
+            <a href="https://t.me/Antiqua_Bsc" target="_blank">
+                <i class="ph-telegram-logo-fill text-2xl mx-3"></i>
+            </a>
+            <a href="https://www.instagram.com/antiqua_bsc/" target="_blank">
+                <i class="ph-instagram-logo-fill text-2xl mx-3"></i></a>
+            <a href=" https://twitter.com/AntiquaBsc" target="_blank">
+                <i class="ph-twitter-logo-fill text-2xl mx-3"></i>
+            </a>
+        </div>
+    </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.js"></script>
+<script src="countdown.js"></script>
+<script src="index.js"></script>
+
+</html>

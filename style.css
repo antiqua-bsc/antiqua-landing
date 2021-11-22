@@ -1,0 +1,67 @@
+.font {
+  font-family: "MedievalSharp", cursive;
+}
+
+body {
+  background-color: #f3e5b1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-primary {
+  background-color: #f3e5b1;
+}
+.buttonShadow {
+  -webkit-box-shadow: 0px 6px 11px -2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 6px 11px -2px rgba(0, 0, 0, 0.08);
+}
+
+.slider::-webkit-scrollbar {
+  width: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: rgba(87, 87, 87, 0.404);
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.collection:hover > .viewCollection {
+  background-color: black;
+}
+
+.collection:hover > .collectionBlackFilter {
+  background-color: rgba(0, 0, 0, 0.213);
+}
+
+.collection > .collectionBlackFilter > span {
+  opacity: 0;
+}
+
+.collection:hover > .collectionBlackFilter > span {
+  opacity: 1 !important;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(87, 87, 87, 0.404);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

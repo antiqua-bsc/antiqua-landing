@@ -28,17 +28,99 @@ setInterval(() => {
   }
 }, 1000);
 
-const collectionDetails = document.querySelector("#collectionDetails");
-const collection = document.querySelector("#collection");
-const closeCollection = document.querySelector("#closeCollection");
+const indigenousDetails = document.querySelector("#indigenousDetails");
+const indigenous = document.querySelector("#indigenous");
+const closeIndigenousCollection = document.querySelector(
+  "#closeIndigenousCollection"
+);
 
-closeCollection.addEventListener("click", () => {
-  collectionDetails.classList.add("hidden");
+closeIndigenousCollection.addEventListener("click", () => {
+  indigenousDetails.classList.add("hidden");
 });
 
-collection.addEventListener("click", () => {
-  collectionDetails.classList.remove("hidden");
+indigenous.addEventListener("click", () => {
+  indigenousDetails.classList.remove("hidden");
   new Glider(document.querySelector(".glider"), {
+    responsive: [
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1.2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3.5,
+        },
+      },
+    ],
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: {
+      prev: ".arrow-prev",
+      next: ".arrow-next",
+    },
+  });
+});
+
+const mayanDetails = document.querySelector("#mayanDetails");
+const mayan = document.querySelector("#mayan");
+const closeMayanCollection = document.querySelector("#closeMayanCollection");
+
+closeMayanCollection.addEventListener("click", () => {
+  mayanDetails.classList.add("hidden");
+});
+
+mayan.addEventListener("click", () => {
+  mayanDetails.classList.remove("hidden");
+  new Glider(document.querySelector(".mayanSlider"), {
+    responsive: [
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1.2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3.5,
+        },
+      },
+    ],
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: {
+      prev: ".arrow-prev",
+      next: ".arrow-next",
+    },
+  });
+});
+
+const pharoDetails = document.querySelector("#pharoDetails");
+const pharo = document.querySelector("#pharo");
+const closePharoCollection = document.querySelector("#closePharoCollection");
+
+closePharoCollection.addEventListener("click", () => {
+  pharoDetails.classList.add("hidden");
+});
+
+pharo.addEventListener("click", () => {
+  pharoDetails.classList.remove("hidden");
+  new Glider(document.querySelector(".pharoSlider"), {
     responsive: [
       {
         breakpoint: 0,
